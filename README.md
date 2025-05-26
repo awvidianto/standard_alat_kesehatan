@@ -12,6 +12,10 @@ Tool ini digunakan untuk mencocokkan nama dalam dataset terhadap nama standar me
 ├── match_standard_name_json.py   # Modul logika pencocokan nama standar
 ├── config.env                     # File konfigurasi untuk API Key dan model
 ├── requirements.txt              # Daftar dependensi Python
+├── file/                          # Folder berisi file input Excel
+│   ├── BHMP_Hospital.xlsx
+│   ├── BHMP_Hospital_Brand.xlsx
+│   └── standard_name_DB.xlsx
 ```
 
 ---
@@ -60,10 +64,11 @@ python batch_runner.py
 
 Script akan:
 - Membaca konfigurasi dari `config.env`
-- Memproses input data dan mengirim ke DeepSeek API
+- Memproses input data dari folder `file/`
+- Mengirim data ke DeepSeek API dan mencocokkan nama
 - Menyimpan hasil yang telah dicocokkan ke output file
 
-Pastikan format dan lokasi file input sudah disesuaikan di dalam `batch_runner.py`.
+Pastikan file input berada di dalam folder `file/` dan struktur kolom sesuai dengan yang diharapkan di dalam script.
 
 ---
 
